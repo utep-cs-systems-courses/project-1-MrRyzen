@@ -1,15 +1,14 @@
 # compiler flags. -g for debug, -03 for optimization
 CFLAGS=-g -O3
 
-all: tokenizer
+all: mainUI
 
+tokenizer.o: tokenizer.h tokenizer.c
 
-tokenizer.o: tokenizer.h
+mainUI.o: tokenizer.h mainUI.c
 
-
-tokenizer: tokenizer.o
+mainUI: mainUI.o tokenizer.o
 	   cc -o $@ $^ $(CFLAGS)
 
-
 clean:
-	rm -f *.o tokenizer
+	rm -f *.o mainUI
