@@ -1,6 +1,6 @@
 Project 1: Tokenizer
 ====================
-#Usage:
+# Usage:
 
 Commands prefix !
  - !e exits
