@@ -54,9 +54,9 @@ char *copy_str(char *inStr, short len) {
 
 void print_tokens(char **tokens) {
   int i = 0;
-
+  
   while(tokens[i]) {
-    printf("Token[%d] = %s\n", i, tokens[i]);
+    printf("%d: %s ", i, tokens[i]);
     i++;
   }
 }
